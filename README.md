@@ -1,4 +1,4 @@
-# [Mapa Mental](Mapa%20Mental%20dos%20Conteúdos.md)
+# [Mapa Mental](#mapa-mental)
 Mapa mental dos conteúdos que estou estudando para coding interviews.
 
 # Coding-Interview

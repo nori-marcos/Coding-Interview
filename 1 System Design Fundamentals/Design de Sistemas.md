@@ -1,7 +1,8 @@
-[⬅ Voltar para índice](../README.md) <br>
-[⬅ Voltar para o mapa mental](../Mapa%20Mental.md)
+[⬅ Home](../README.md) <br>
+[⬅ Mapa Mental](../README.md#Mapa%20Mental)
 
 > **Sumário**
+>
 > - [Design de Sistemas](#design-de-sistemas)
 > - [0. Introdução sobre as 4 áreas de conhecimento sobre design de sistemas](#0-introdução-sobre-as-4-áreas-de-conhecimento-sobre-design-de-sistemas)
 > - [1. Client-Server Model](#1-client-server-model)

@@ -59,8 +59,8 @@ O armazenamento é um dos componentes mais importantes do sistema e consiste bas
 - **Read**: Querying, fetching, or retrieving data. Essa operação é feita quando o cliente requisita dados do servidor e o servidor busca esses dados no banco de dados.
 
 O database é basicamente um servidor que armazena dados. Um outro conceito importante de entender é questão de **persistência**. Persistência é o conceito de que os dados devem ser armazenados de forma que eles não sejam perdidos quando o servidor é desligado ou reiniciado. Para isso funcionar, dois componentes interagem:
--**Disk**: O disco armazena as informações mesmo que o servidor seja desligado. 
--**Memory**: A memória é volátil e não armazena os dados quando o servidor é desligado. A memória é muito mais rápida que o disco, mas não armazena os dados de forma persistente. A memória é usada por exemplo quando guardamos o valor de um contador em uma variável. Se o servidor for desligado, o valor do contador é perdido.
+- **Disk**: O disco armazena as informações mesmo que o servidor seja desligado. 
+- **Memory**: A memória é volátil e não armazena os dados quando o servidor é desligado. A memória é muito mais rápida que o disco, mas não armazena os dados de forma persistente. A memória é usada por exemplo quando guardamos o valor de um contador em uma variável. Se o servidor for desligado, o valor do contador é perdido.
 
 
 ## 4. Latency and Throughput

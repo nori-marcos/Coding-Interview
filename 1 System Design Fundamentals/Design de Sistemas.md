@@ -13,7 +13,6 @@
 # Design de Sistemas
 
 ## 0. Introdução sobre as 4 áreas de conhecimento sobre design de sistemas
-
 Existe uma série de informações a respeito do design de sistemas,mas podemos dividir o conhecimento sobre o assunto em 4 categorias principais:
 
 - **Conhecimento Base**: Conhecimento básico dos elementos de um sistema como servidores, bancos de dados, redes, etc.
@@ -28,7 +27,6 @@ Existe uma série de informações a respeito do design de sistemas,mas podemos 
 - **Tecnologias**: Tecnologias específicas que podem ser utilizadas para implementar os componentes do sistema, como zookeeper, redis, google cloud, aws, etc.
 
 ## 1. Client-Server Model
-
 É um dos modelos mais comuns de arquitetura de sistemas. Aqui é importante entender, por exemplo, o que acontece quando coloco no navegador o endereço de um site. Aqui é necessário definir dois conceitos importantes:
 
 - **Client**: O cliente é a máquina que "conversa" com um servidor. "Conversar" com o servidor significa enviar ou requisitar dados do servidor.
@@ -51,10 +49,19 @@ O protocolo é um conjunto de regras que define a interação entre duas partes.
 Os tipos mais comuns de protocolos são:
 - **IP**: Internet Protocol. É o protocolo mais básico da internet e define como os dados são enviados entre máquinas na rede de internet. Neste tipo de protocolo, os dados são enviados em pacotes, chamados em inglês de IP packets.Esses pacotes são compostos por bytes e tem duas partes principais:
   - Header: Contém informações sobre o pacote, como o endereço IP de origem e destino, o número do pacote, o tamanho do pacote, a versão do protocolo (IPV4 ou IPV6), etc. O header é bem pequeno e geralmente tem entre 20 e 60 bytes.
-  - Data: Tem o tamanha do 2^16 bytes (2^6 * 2^10, respectivamente 64KB).
-
-
+  - Data: Tem o tamanha do 2^16 bytes (2^6 * 2^10, respectivamente 64KB). Esse é um valor bem pequeno para transmitir uma boa parte dos dados que nós conhecemos. Isso significa que o IP não é capaz de enviar arquivos grandes. Para isso, existem outros protocolos como o TCP e o UDP.
+- **TCP**: Transmission Control Protocol. É o protocolo que funciona sobre o IP e adiciona um novo header para controlar a entrega dos pacotes de dados na ordem correta. Antes de enviar os dados, o cliente e o servidor fazem um handshake para estabelecer uma conexão, isso garante que ambos estão prontos para se comunicar.
+- **HTTP**: Hypertext Transfer Protocol. É o protocolo que funciona sobre o TCP e tem um nível de abstração maior que os anteriores. O paradigma contido aqui é o de requisição e resposta, em que o cliente faz uma requisição HTTP para o servidor e o servidor responde com os dados requisitados.
+  
 ## 3. Storage
+O armazenamento é um dos componentes mais importantes do sistema e consiste basicamente em executas duas operações:
+- **Write**: Storage, record, setting, or saving data. Essa operação é feita quando o cliente envia dados para o servidor e o servidor armazena esses dados em um banco de dados.
+- **Read**: Querying, fetching, or retrieving data. Essa operação é feita quando o cliente requisita dados do servidor e o servidor busca esses dados no banco de dados.
+
+O database é basicamente um servidor que armazena dados. Um outro conceito importante de entender é questão de **persistência**. Persistência é o conceito de que os dados devem ser armazenados de forma que eles não sejam perdidos quando o servidor é desligado ou reiniciado. Para isso funcionar, dois componentes interagem:
+-**Disk**: O disco armazena as informações mesmo que o servidor seja desligado. 
+-**Memory**: A memória é volátil e não armazena os dados quando o servidor é desligado. A memória é muito mais rápida que o disco, mas não armazena os dados de forma persistente. A memória é usada por exemplo quando guardamos o valor de um contador em uma variável. Se o servidor for desligado, o valor do contador é perdido.
+
 
 ## 4. Latency and Throughput
 Latency e Throughput são os conceitos mais importantes quando falamos da performance de um sistema.
